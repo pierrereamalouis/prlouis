@@ -1,0 +1,19 @@
+{
+  "tasks": {
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+    "build": "deno task lume",
+    "serve": "deno task lume -s",
+    "build:lit": "deno run -A _lit/src/esbuild.ts --entryDir=_lit/src/components --outputDir=src/components"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "npm:preact"
+  },
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v1.16.2/",
+    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+    "vue": "npm:vue",
+    "vite": "npm:vite",
+    "vue-rollup": "npm:rollup-plugin-vue"
+  }
+}
